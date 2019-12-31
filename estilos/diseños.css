@@ -1,0 +1,187 @@
+*{margin: 0; padding: 0; font-family: Arial, Helvetica, sans-serif;}
+
+body{
+    background: lightblue;
+}
+
+.nav{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background: black;
+    padding: 10px;
+    display: flex;
+}
+    .nav ul{
+        list-style: none;
+    }
+
+.menu > li{
+    display: inline-block;
+}
+    .menu > li > a{
+        display: block;
+        padding: 15px 20px;
+        margin: 0;
+        text-decoration: none;
+        background: gray;
+        color: #fff;
+        display: inline-block;
+    }
+.menu li a:hover{
+    color: rgb(110, 60, 60);
+    background: rgb(110, 123, 235); 
+    transition: all 0.3s;
+}
+
+.submenu{
+    position: absolute;
+    background: #333333;
+    width: 10%;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 1.5s;
+}
+    .submenu li a{
+        display: block;
+        padding: 15px;
+        color: #fff;
+        text-decoration: none;
+    }
+
+.menu li:hover .submenu{
+    visibility: visible;
+    opacity: 1;
+}
+
+h1{
+    font-size: 30px;
+    padding: 10px;
+    margin: 5px;
+}
+
+.slider{
+    width: 95%; 
+    margin: auto;
+    overflow: hidden;
+}
+    .slider ul{
+        padding: 0; 
+        display: flex; 
+        width: 400%;
+        animation: cambio 20s infinite;
+        animation-timing-function: ease-in;
+    }
+    .slider ul li{
+        list-style-type: none;
+        width: 100%;
+    }
+    .slider ul li img{
+        width: 100%;
+    }
+
+@keyframes cambio{
+    0%{margin-left: 0;}
+    20%{margin-left: 0;}
+    25%{margin-left: -100%;}
+    45%{margin-left: -100%;}
+    50%{margin-left: -200%;}
+    70%{margin-left: -200%;}
+    75%{margin-left: -300%;}
+    100%{margin-left: -300%;}
+}
+
+h2{
+    font-size: 15px;
+    padding: 10px;
+}
+
+.promos{
+    background: rgb(17, 211, 224);
+    height: 500px;
+    padding: 0%;
+    margin: 1%;
+    width: 100%;
+}
+    .promos div{
+        height: 400px;
+        padding: 0;
+        margin: 2%;
+        width: 96%;
+    }
+
+.vendidos{
+    background: rgb(212, 16, 16);
+    height: 500px;
+    padding: 0;
+    margin: 1%;
+    width: 100%;
+}
+    .vendidos div{
+        height: 400px;
+        padding: 0;
+        margin: auto;
+    }
+
+.vendidos2{ /* Sección de ejemplo */
+    background: rgb(97, 131, 35);
+    height: 500px;
+    padding: 0;
+    margin: 1%;
+    width: 100%;
+}
+    .vendidos2 div{
+        height: 400px;
+        padding: 0;
+        margin: auto;
+    }
+
+.vendidos3{ /* Sección de ejemplo */
+    background: rgb(128, 34, 131);
+    height: 500px;
+    padding: 0;
+    margin: 1%;
+    width: 100%;
+}
+    .vendidos3 div{
+        height: 400px;
+        padding: 0;
+        margin: auto;
+    }
+    
+    
+.info{
+    background: rgb(65, 61, 61);
+    width: 100%;
+    padding: 2%;
+    display: flex;
+}
+
+iframe{width: auto; float: left;}
+
+.datos{width: 100%; margin: auto; padding: 5%;}
+
+p{color:rgb(223, 217, 217); font-size: 20px; padding: 5px; clear: both;}
+
+footer{
+    clear: both;
+    background: rgb(31, 30, 30);
+    text-align: center; 
+    padding: 2%; 
+    color: white;
+    width: 100%;
+}
+
+@media screen and (min-width:1px) and (max-width: 550px){
+
+    iframe{width: 150px; height: 150px; margin: auto; padding: 0;}
+
+    .datos{width: 100%; margin: auto; padding: 2%;}
+
+    p{font-size: 15px;}
+
+    .nav{width: 100%;}
+
+    .submenu{width: 40%;}
+}
+
